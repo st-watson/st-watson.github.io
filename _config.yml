@@ -34,6 +34,13 @@ theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
+# Enable pagination
+pagination: true
+
+# Turn on navigation bar
+header_pages:
+  - index.md
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
