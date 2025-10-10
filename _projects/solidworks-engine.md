@@ -12,4 +12,10 @@ header:
     teaser: "/assets/images/projects/solidworks-engine/engine-assembly-teaser.jpg"
 ---
 
+# Description
 Following an online tutorial.
+
+# Motion Study
+
+# Assembly Parts
+## Piston

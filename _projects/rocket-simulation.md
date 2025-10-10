@@ -1,7 +1,7 @@
 ---
 title: "Cold Flow Gas Nozzle Design"
 date: 2025-10-10
-exerpt: "A simulation of rocket thrust using Python."
+exerpt: "A simulated cold gass nozzle design."
 toc: true
 toc_icon: "list"
 tags:
