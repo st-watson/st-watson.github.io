@@ -1,10 +1,9 @@
 ---
 title: Resume
 layout: single
-permalink: /resume/
+# permalink: /resume/
 ---
-
-<iframe src="/assets/pdfs/Resume_SWatson.pdf" width="100%" height="820px"></iframe>
-<p style="text-align:center;">
-  <a href="/assets/files/Scott_Watson_Resume.pdf" download class="btn">Download PDF</a>
+<p style="text-align:left;">
+  <a href="/assets/pdfs/Resume_SWatson.pdf" download class="btn">Download PDF</a>
 </p>
+<iframe src="/assets/pdfs/Resume_SWatson.pdf" width="100%" height="820px"></iframe>
