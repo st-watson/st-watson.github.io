@@ -1,0 +1,20 @@
+main:
+  # - title: "Quick-Start Guide"
+  #   url: /docs/quick-start-guide/
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /_pages/projects/
+  - title: "Research"
+    url: /_pages/research/
+  - title: "Portfolio"
+    url: /_pages/portfolio/
+  # - title: "Tags"
+    # url: /tags/
+  # - title: "Pages"
+    # url: /page-archive/
+  # - title: "Collections"
+    # url: /collection-archive/
+  # - title: "External Link"
+    # url: https://google.com
+    # target: _blank
