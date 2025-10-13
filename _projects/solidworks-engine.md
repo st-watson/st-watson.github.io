@@ -8,8 +8,8 @@ tags:
     - 3D CAD
     - SolidWorks
 header:
-    image: "/assets/images/projects/solidworks-engine/engine-assembly.jpg"
-    teaser: "/assets/images/projects/solidworks-engine/engine-assembly-teaser.jpg"
+    image: "assets/images/projects/solidworks-engine/engine-assembly.jpg"
+    teaser: "assets/images/projects/solidworks-engine/engine-assembly-teaser.jpg"
 ---
 
 # Description
