@@ -1,0 +1,135 @@
+.timeline-list {
+  position: relative;
+  list-style: none;
+  padding: 2rem 0;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #007acc;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+
+  &.left {
+    left: 0;
+    text-align: right;
+
+    .timeline-content {
+      margin-right: 40px;
+      border-radius: 8px;
+    }
+
+    .timeline-dot {
+      right: -8px;
+    }
+  }
+
+  &.right {
+    left: 50%;
+    text-align: left;
+
+    .timeline-content {
+      margin-left: 40px;
+      border-radius: 8px;
+    }
+
+    .timeline-dot {
+      left: -8px;
+    }
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 1;
+    background-color: #007acc; /* default */
+    transition: transform 0.3s ease;
+  }
+
+  /* Color-code dots by data-type attribute */
+  &[data-type~="Mechanical"] .timeline-dot {
+    background-color: #FF6F61;
+  }
+
+  &[data-type~="CAD"] .timeline-dot {
+    background-color: #6B5B95;
+  }
+
+  &[data-type~="Simulation"] .timeline-dot {
+    background-color: #88B04B;
+  }
+
+  .timeline-content {
+    background: #f5f5f5;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    a {
+      font-weight: bold;
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .timeline-date {
+      display: block;
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+  }
+
+  .timeline-position {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+  margin: 0.2rem 0 0.4rem 0;
+}
+
+}
+
+/* Responsive: stack timeline items on small screens */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+
+    .timeline-dot {
+      left: 14px !important;
+      right: auto !important;
+    }
+
+    .timeline-content {
+      margin: 0 0 0 40px !important;
+    }
+  }
+
+  .timeline-list::before {
+    left: 15px !important;
+  }
+}

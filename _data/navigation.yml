@@ -5,7 +5,5 @@ main:
     url: /_pages/projects/
   - title: "Research"
     url: /_pages/research/
-  - title: "Portfolio"
-    url: /_pages/portfolio/
   - title: "Resume"
     url: /_pages/resume/
