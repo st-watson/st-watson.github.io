@@ -1,0 +1,96 @@
+---
+# This is a Jekyll layout for individual co-op pages
+---
+
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="coop-page container mx-auto px-4 py-8">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold mb-2">{{ page.title }}</h1>
+
+    <!-- Position and Dates -->
+    <p class="text-lg text-gray-700 mb-4">
+      {% if page.position %}
+        <strong>Position:</strong> {{ page.position }}<br>
+      {% endif %}
+      {% if page.start_date %}
+        <strong>Dates:</strong> {{ page.start_date | date: "%b %Y" }} –
+        {% if page.end_date %}
+          {{ page.end_date | date: "%b %Y" }}
+        {% else %}
+          Present
+        {% endif %}
+      {% endif %}
+    </p>
+
+    <!-- Skills / Technologies -->
+    {% if page.skills %}
+      <div class="mb-4">
+        <strong>Skills / Technologies:</strong>
+        <ul class="flex flex-wrap gap-2 mt-1">
+          {% for skill in page.skills %}
+            <li class="bg-blue-500 text-white text-sm px-2 py-1 rounded">{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- Overview / Description -->
+    {% if page.description %}
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">Overview</h2>
+        <p>{{ page.description }}</p>
+      </div>
+    {% endif %}
+
+    <!-- Visuals / Images -->
+    {% if page.images %}
+      <div class="coop-images grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        {% for img in page.images %}
+          <img src="{{ img | relative_url }}" alt="{{ page.title }} image" class="rounded shadow">
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Optional Outcomes / Achievements -->
+    {% if page.outcomes %}
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">Outcomes</h2>
+        <ul class="list-disc list-inside">
+          {% for outcome in page.outcomes %}
+            <li>{{ outcome }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- Optional Links -->
+    {% if page.links %}
+      <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">Links</h2>
+        <ul class="list-disc list-inside text-blue-600 underline">
+          {% for link in page.links %}
+            <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- Back to Timeline -->
+    <div class="mt-8">
+      <a href="{{ site.baseurl }}/" class="text-blue-500 hover:underline">&larr; Back to Timeline</a>
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
+{% endraw %}

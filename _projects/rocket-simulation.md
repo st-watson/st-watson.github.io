@@ -9,7 +9,10 @@ tags:
     - Analysis
 ---
 
-# Analytical Analysis
-## First Principals Derivations
+## Overview
+As part of the application process for my position as a propulsion intern with [SpaceRyde](/coops/spaceryde.md), a challenge was put forward to all applicants regarding the design of a cold gas propulsion system.
 
-# Simulation Verification
+## Analytical Analysis
+### First Principals Derivations
+
+## Simulation Verification
